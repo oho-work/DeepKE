@@ -30,6 +30,7 @@ def main(cfg):
     # Use gpu or not
     if cfg.use_gpu and torch.cuda.is_available():
         device = torch.device('cuda', cfg.gpu_id)
+        print(cfg.gpu_id)
     else:
         device = torch.device('cpu')
 
